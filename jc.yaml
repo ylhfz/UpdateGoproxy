@@ -1,101 +1,10 @@
-port: 7890
-socks-port:7891
-allow-lan: false
-mode: Rule
-log-level: silent
-
-dns:
-  enable: true
-  listen: 0.0.0.0:53
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - 8.8.4.4
-    - 1.1.1.1
-  fake-ip-filter:
-    #- ros.hello-abc.com       # 让终端正确获取家里的公网ip，以便通过wireguard连接回家
-    #- v.home
-    # 以下域名列表参考自 vernesong/OpenClash 项目，并由 Hackl0us 整理补充
-    # === LAN ===
-    - '*.lan'
-    # === Linksys Wireless Router ===
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    # === Apple Software Update Service ===
-    - 'swscan.apple.com'
-    - 'mesu.apple.com'
-    # === Windows 10 Connnect Detection ===
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    # === NTP Service ===
-    - 'time.*.com'
-    - 'time.*.gov'
-    - 'time.*.edu.cn'
-    - 'time.*.apple.com'
-
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
-
-    - 'ntp.*.com'
-    - 'ntp.*.com'
-    - 'ntp1.*.com'
-    - 'ntp2.*.com'
-    - 'ntp3.*.com'
-    - 'ntp4.*.com'
-    - 'ntp5.*.com'
-    - 'ntp6.*.com'
-    - 'ntp7.*.com'
-
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - '+.pool.ntp.org'
-
-    - 'time1.cloud.tencent.com'
-    # === Music Service ===
-    ## NetEase
-    - '+.music.163.com'
-    - '*.126.net'
-    ## Baidu
-    - 'musicapi.taihe.com'
-    - 'music.taihe.com'
-    ## Kugou
-    - 'songsearch.kugou.com'
-    - 'trackercdn.kugou.com'
-    ## Kuwo
-    - '*.kuwo.cn'
-    ## JOOX
-    - 'api-jooxtt.sanook.com'
-
-    # - "*.lan"
-    # - localhost.ptlogin2.qq.com
-    # - dns.msftncsi.com
-    # - www.msftncsi.com
-    # - www.msftconnecttest.com
-
-  nameserver:
-    # - https://dns.alidns.com/dns-query
-    # - https://1.1.1.1/dns-query
-    # - tls://dns.adguard.com:853
-    - 223.5.5.5                 # 默认DNS
-    - 119.29.29.29
-    - 114.114.114.114              
-  fallback:
-    - https://dns.google/dns-query
-    - https://doh.pub/dns-query
-    - https://cloudflare-dns.com/dns-query
 
 
 
 
-external-controller: :9090
+
+
+
 
 
 
